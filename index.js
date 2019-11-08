@@ -1,4 +1,4 @@
-$(function() {
+jQuery(document).ready(function($) {
   var $win = $(window);
   var $log = $("#log");
   var $view = $(".view");
@@ -14,10 +14,10 @@ $(function() {
 
   for (var i = 0; i < 16; i += 1) {
     let imgNumber = Math.floor(Math.random() * 4) + 1;
-    let imagePath = `./assets/${imgNumber}.jpeg`;
+    let imagePath = `http://entice.bbem.in/wp-content/themes/Divi/images/${imgNumber}.jpeg`;
     let imgClass = "";
     if (i === 6) {
-      imagePath = `./assets/logo.jpeg`;
+      imagePath = `http://entice.bbem.in/wp-content/themes/Divi/images/logo.jpeg`;
       imgClass = "logo";
     }
 
@@ -35,6 +35,11 @@ $(function() {
     var mouseX = event.pageX - parentOffset.left;
     var mouseY = event.pageY - parentOffset.top;
 
+
+    console.log('mouse x',mouseX);
+    console.log('mouseY', mouseY);
+    
+
     $log.text(mouseX + ", " + mouseY);
 
     var viewRangeX = $this.width();
@@ -51,6 +56,9 @@ $(function() {
 
     var offsetX = mouseX * ratioX - mouseX;
     var offsetY = mouseY * ratioY - mouseY;
+
+    console.log('offsetX',offsetX);
+    console.log('offsetY',offsetY);
 
     $content.css({
       transform: "translate(" + offsetX * -0.62 + "px" + ", " + offsetY * -1 + "px" + ")"
