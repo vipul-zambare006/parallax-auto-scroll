@@ -1,0 +1,54 @@
+html,
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  height: 100%;
+  max-width: 100%;
+  padding: 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+img {
+  border: 1px solid white;
+  display: block;
+  float: left;
+  height: 500px;
+  width: 500px;
+  padding: 10px;
+}
+
+.logo {
+  height: 300px;
+  width: 500px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.view {
+  overflow: hidden;
+  position: relative;
+}
+
+.content {
+  position: relative;
+  overflow: hidden;
+}
+
+#log {
+  background: white;
+  border-radius: 0 0 2px 0;
+  color: #333;
+  font-family: sans-serif;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+/* 
+.custom-cur {
+  cursor: url("./assets/compass.svg"), move;
+} */
