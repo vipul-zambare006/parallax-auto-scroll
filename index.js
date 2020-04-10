@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
       navigator.userAgent
     )
   ) {
-    window.location.href = "index-mobile.html";
+    window.location.href = "http://entice.bbem.in/index-mobile";
   } else {
     var $win = $(window);
     var $log = $("#log");
